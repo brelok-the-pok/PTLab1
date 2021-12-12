@@ -17,6 +17,6 @@ class XmlDataReader(DataReader):
                 self.students[name] = []
                 for subj in person:
                     self.students[name].append(
-                        (subj.tag, int(subj.text))
+                        (subj.tag, int(subj.text or "0"))
                     )
         return self.students
