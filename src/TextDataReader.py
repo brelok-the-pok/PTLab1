@@ -8,7 +8,7 @@ class TextDataReader(DataReader):
         self.students: DataType = {}
 
     def read(self, path: str) -> DataType:
-        with open(path, encoding='utf-8') as file:
+        with open(path) as file:
             for line in file:
                 if not line.startswith(" "):
                     self.key = line.strip()
