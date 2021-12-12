@@ -9,7 +9,7 @@ class XmlDataReader(DataReader):
         self.students: DataType = {}
 
     def read(self, path: str) -> DataType:
-        with open(path) as file:
+        with open(path, encoding="utf-8") as file:
             xml_tree = ET.parse(file)
             root = xml_tree.getroot()
             for person in root:
